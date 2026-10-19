@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ASMAIN COLLECTION — Elegant Jewellery for Every Occasion</title>
+<meta name="description" content="Elevate your style with ASMAIN COLLECTION — elegant, trendy, affordable jewellery. Earrings, necklaces, bangles, rings & matching sets." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<div class="nav-wrap">
+  <nav class="nav">
+    <a href="#" class="logo" id="logoLink">ASMAIN <span>COLLECTION</span></a>
+    <div class="menu">
+      <a href="#shop">Shop</a>
+      <a href="#categories">Collections</a>
+      <a href="#story">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-icons">
+      <button onclick="openCart()" title="Cart" style="position:relative">
+        🛍<span class="cart-badge" id="cartCount">0</span>
+      </button>
+      <button class="hamburger" onclick="openMobileMenu()" title="Menu">☰</button>
+    </div>
+  </nav>
+</div>
+
+<!-- ============ MOBILE MENU ============ -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="closeMobileMenu()">×</button>
+  <a href="#shop" onclick="closeMobileMenu()">Shop</a>
+  <a href="#categories" onclick="closeMobileMenu()">Collections</a>
+  <a href="#story" onclick="closeMobileMenu()">About</a>
+  <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-tag" id="heroTag">New Collection · 2026</div>
+    <h1 id="heroTitle">Elevate Your Style<br>with <em>Timeless Elegance</em></h1>
+    <p id="heroDesc">Discover elegant, trendy & affordable jewellery — earrings, necklaces, bangles, rings & matching sets. Perfect for every occasion.</p>
+    <div class="hero-cta">
+      <a href="#shop" class="btn">Shop Collection</a>
+      <a href="#" id="heroWa" class="btn btn-wa" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.2-.3-.2-.5-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.3c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+        Chat on WhatsApp
+      </a>
+    </div>
+  </div>
+  <div class="hero-scroll">Scroll</div>
+</section>
+
+<!-- ============ CATEGORIES ============ -->
+<section class="section" id="categories">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Explore</div>
+      <h2>Shop by <em>Category</em></h2>
+      <div class="gold-line"></div>
+    </div>
+    <div class="categories" id="categoryGrid"></div>
+  </div>
+</section>
+
+<!-- ============ PRODUCTS ============ -->
+<section class="section products-section" id="shop">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Our Collection</div>
+      <h2>Featured <em>Pieces</em></h2>
+      <div class="gold-line"></div>
+      <p>Handpicked designs loved by our community — luxury-inspired looks at budget-friendly prices.</p>
+    </div>
+    <div class="filters" id="filters"></div>
+    <div class="product-grid" id="productGrid"></div>
+  </div>
+</section>
+
+<!-- ============ STORY ============ -->
+<section class="section" id="story">
+  <div class="container">
+    <div class="story">
+      <div class="story-img">
+        <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=900&q=85" alt="ASMAIN craftsmanship" />
+      </div>
+      <div class="story-text">
+        <div class="eyebrow">Our Story</div>
+        <h2>Sparkle with <em>Confidence</em></h2>
+        <div class="gold-line"></div>
+        <p>ASMAIN COLLECTION is your destination for beautiful jewellery that adds the perfect touch of glamour to any outfit. From stunning earrings and necklaces to bangles, rings and matching sets — every piece is designed to make you shine.</p>
+        <p>Treat yourself or surprise someone special with jewellery that makes every moment memorable.</p>
+        <div class="story-features">
+          <div>Elegant Designs</div>
+          <div>Beautiful Finishes</div>
+          <div>Budget-Friendly</div>
+        </div>
+        <a href="#shop" class="btn">Shop the Collection</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="section contact-section" id="contact">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Get in Touch</div>
+      <h2>Connect with <em>Us</em></h2>
+      <div class="gold-line"></div>
+      <p>We'd love to hear from you. Reach out on any platform — we respond fast!</p>
+    </div>
+    <div class="contact-grid" id="contactGrid"></div>
+  </div>
+</section>
+
+<!-- ============ NEWSLETTER ============ -->
+<section class="section newsletter">
+  <div class="container">
+    <h2>Join the <em>ASMAIN Circle</em></h2>
+    <p>Be first to know about new arrivals, private sales, and styling tips.</p>
+    <form class="news-form" onsubmit="subscribe(event)">
+      <input type="email" placeholder="Your email address" required />
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#" class="logo">ASMAIN <span style="color:var(--white)">COLLECTION</span></a>
+        <p>Elevate your style with elegant, trendy & affordable jewellery. Beautiful finishes and luxury-inspired looks — for every occasion.</p>
+        <div class="socials" id="socials"></div>
+      </div>
+      <div class="foot-col">
+        <h5>Shop</h5>
+        <a href="#shop">Rings</a>
+        <a href="#shop">Necklaces</a>
+        <a href="#shop">Earrings</a>
+        <a href="#shop">Bangles & Sets</a>
+      </div>
+      <div class="foot-col">
+        <h5>Help</h5>
+        <a href="#contact">Contact</a>
+        <a href="#">Shipping</a>
+        <a href="#">Returns</a>
+        <a href="#">Size Guide</a>
+      </div>
+      <div class="foot-col">
+        <h5>Get in Touch</h5>
+        <a id="footWa" target="_blank" rel="noopener">WhatsApp</a>
+        <a id="footEmail">Email</a>
+        <span style="color:#777;font-size:13px;margin-top:8px">Karachi, Pakistan</span>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span id="copyright"></span>
+      <span>Crafted with ♥ in Pakistan</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ FLOATING WHATSAPP ============ -->
+<a id="waFloat" target="_blank" rel="noopener" class="wa-float" title="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.2-.3-.2-.5-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.3c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+</a>
+
+<!-- ============ CART ============ -->
+<div class="overlay" id="overlay" onclick="closeCart()"></div>
+<aside class="drawer" id="drawer">
+  <div class="drawer-head">
+    <h3>Your Cart</h3>
+    <button class="close-btn" onclick="closeCart()">×</button>
+  </div>
+  <div class="drawer-body" id="cartBody"></div>
+  <div class="drawer-foot">
+    <div class="total-row"><span>Subtotal</span><strong id="cartTotal">PKR 0</strong></div>
+    <button class="checkout-btn" onclick="checkout()">Order via WhatsApp</button>
+    <div class="checkout-note">Or <a href="#contact" onclick="closeCart()">contact us</a> for custom orders</div>
+  </div>
+</aside>
+
+<!-- ============ PRODUCT MODAL ============ -->
+<div class="modal-overlay" id="productModal" onclick="if(event.target===this)closeProduct()">
+  <div class="modal" id="modalContent"></div>
+</div>
+
+<!-- ============ TOAST ============ -->
+<div class="toast" id="toast">Added to cart</div>
+
+<!-- ============ SCRIPTS ============ -->
+<script src="products.js"></script>
+<script src="app.js"></script>
+<script>
+/* Populate dynamic brand info from products.js */
+document.addEventListener('DOMContentLoaded', () => {
+  // Logo
+  document.getElementById('logoLink').innerHTML = STORE.name.replace(' ', ' <span>') + '</span>';
+
+  // Hero
+  document.getElementById('heroWa').href = STORE.whatsapp;
+  document.getElementById('waFloat').href = STORE.whatsapp;
+
+  // Copyright
+  document.getElementById('copyright').textContent = `© ${new Date().getFullYear()} ${STORE.name}. All rights reserved.`;
+
+  // Footer links
+  document.getElementById('footWa').href = STORE.whatsapp;
+  document.getElementById('footWa').textContent = 'WhatsApp';
+  document.getElementById('footEmail').href = `mailto:${STORE.email}`;
+  document.getElementById('footEmail').textContent = STORE.email;
+
+  // Socials
+  document.getElementById('socials').innerHTML = `
+    <a href="${STORE.instagram}" target="_blank" rel="noopener" title="Instagram">◎</a>
+    <a href="${STORE.facebook}" target="_blank" rel="noopener" title="Facebook">f</a>
+    <a href="${STORE.tiktok}" target="_blank" rel="noopener" title="TikTok">♪</a>
+    <a href="${STORE.whatsapp}" target="_blank" rel="noopener" title="WhatsApp">✆</a>
+    <a href="mailto:${STORE.email}" title="Email">✉</a>
+  `;
+
+  // Contact cards
+  document.getElementById('contactGrid').innerHTML = `
+    <div class="contact-card">
+      <div class="icon">✆</div>
+      <h4>WhatsApp</h4>
+      <p>Fastest way to order or ask questions</p>
+      <a href="${STORE.whatsapp}" target="_blank" rel="noopener">Message Us →</a>
+    </div>
+    <div class="contact-card">
+      <div class="icon">✉</div>
+      <h4>Email</h4>
+      <p>For bulk orders & inquiries</p>
+      <a href="mailto:${STORE.email}">${STORE.email}</a>
+    </div>
+    <div class="contact-card">
+      <div class="icon">◎</div>
+      <h4>Instagram</h4>
+      <p>See our latest arrivals daily</p>
+      <a href="${STORE.instagram}" target="_blank" rel="noopener">@asmaincollection →</a>
+    </div>
+    <div class="contact-card">
+      <div class="icon">▶</div>
+      <h4>TikTok</h4>
+      <p>Watch styling videos & reels</p>
+      <a href="${STORE.tiktok}" target="_blank" rel="noopener">@asmain.collection →</a>
+    </div>
+    <div class="contact-card">
+      <div class="icon">f</div>
+      <h4>Facebook</h4>
+      <p>Follow for updates & offers</p>
+      <a href="${STORE.facebook}" target="_blank" rel="noopener">ASMAIN Collection →</a>
+    </div>
+    <div class="contact-card">
+      <div class="icon">◈</div>
+      <h4>Order Now</h4>
+      <p>Browse & checkout in minutes</p>
+      <a href="#shop">Shop Collection →</a>
+    </div>
+  `;
+
+  // Categories (derived from products)
+  const catImages = {
+    'Rings': 'https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=600&q=80',
+    'Necklaces': 'https://images.unsplash.com/photo-1599643477877-530eb83abc8e?w=600&q=80',
+    'Earrings': 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=600&q=80',
+    'Bangles & Sets': 'https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=600&q=80',
+  };
+  const cats = [...new Set(PRODUCTS.map(p => p.category))];
+  document.getElementById('categoryGrid').innerHTML = cats.slice(0, 4).map(c => `
+    <a href="#shop" class="cat" onclick="setTimeout(()=>setFilter('${c}'),300)">
+      <img src="${catImages[c] || PRODUCTS.find(p=>p.category===c).image}" alt="${c}" />
+      <div class="cat-label">${c}</div>
+    </a>
+  `).join('');
+});
+</script>
+</body>
+</html>
